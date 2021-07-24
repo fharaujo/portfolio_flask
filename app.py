@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request 
 
 import smtplib
-import os
+
+from werkzeug.utils import redirect
+
 
 app = Flask(__name__)
 
@@ -32,7 +34,7 @@ def send():
         server.sendmail("araujofabio2012@gmail.com", email, thanks.encode('utf-8'))
         
         
-    return render_template('index.html')
+    return redirect('/')
 
 
 @app.route('/')
