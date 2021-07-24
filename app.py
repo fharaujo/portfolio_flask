@@ -19,7 +19,7 @@ def send():
         
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
-        server.login("araujofabio2012@gmail.com", os.getenv("PASSWORD"))
+        server.login("araujofabio2012@gmail.com", "dfbg hehk pmnq vkth")
         server.sendmail(email,"araujofabio2012@gmail.com", msg.encode('utf-8'))
         server.quit()
         
@@ -29,7 +29,7 @@ def send():
         
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
-        server.login("araujofabio2012@gmail.com", os.getenv("PASSWORD"))
+        server.login("araujofabio2012@gmail.com", "dfbg hehk pmnq vkth")
         server.sendmail("araujofabio2012@gmail.com", email, thanks.encode('utf-8'))
         server.quit()
         
