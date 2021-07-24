@@ -21,11 +21,11 @@ def send():
         server.starttls()
         server.login("araujofabio2012@gmail.com", os.getenv("PASSWORD"))
         server.sendmail(email,"araujofabio2012@gmail.com", msg.encode('utf-8'))
-        
+        server.quit()
         
         # envio automático de confirmação 
         subject = 'Fábio Araujo - Developer'
-        thanks = f'Subject: {subject}\nConfirmação de email recebido.\nObrigado por entrar em contato, {name}.\n\n\nCópia da sua Mensagem: {text}'
+        thanks = f'Subject: {subject}\nConfirmação de email recebido.\nObrigado por entrar em contato, {name}.\n\n\n\nCópia da sua Mensagem: {text}'
         
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
