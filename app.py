@@ -24,6 +24,7 @@ def send():
         server.quit() 
         
         # envio automático de confirmação 
+        subject = 'Email site: Fábio Araujo - Developer'
         thanks = f'Subject: {subject}\n\nConfirmação de email recebido.\nObrigado por entrar em contato, {name}. \n\n'
         
         server = smtplib.SMTP("smtp.gmail.com", 587)
