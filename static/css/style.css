@@ -1,0 +1,533 @@
+/* Folha de estilo do portfólio */
+
+/* reset da página */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+
+/*******************************************
+ style start body 
+ *******************************************/
+body {
+    font-family: 'Anonymous Pro', monospace;  
+    background-image: 
+    linear-gradient( to right,
+        rgba(0, 0, 0, 1.0) 40%,
+        rgba(0, 0, 0, 0.5)), 
+        url('/static/images/code.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size:  100% 100%;
+    
+    
+}
+
+/*============================================
+  final style body 
+ =============================================*/
+
+
+html {
+    background-color: #dededf;
+    scroll-behavior: smooth;
+ 
+}
+
+
+/*********************************************
+style start button scroll top 
+**********************************************/
+#btntop{
+    display: none;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(137, 7, 141, 0.76);
+    color: #ffd500;
+    bottom: 105px;
+    right: 10px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    
+    
+}
+#btntop:hover{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    transition: all 0.4s ease-in-out;
+}
+
+/*=======================================
+    final style  button scroll top 
+=========================================*/
+
+
+
+/*********************************
+ style start nav 
+ *********************************/
+
+nav{
+    width: 100%;
+    height: 8vh;
+    background-color: #5c0099;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    padding-top: .1rem;
+    
+    
+}
+
+nav ul li{
+    padding: 1rem;
+    font-size: 16px;
+    align-items: center;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #ffd500;
+    padding: 15px;
+    border-radius: 5px;
+    transition: 0.6s ease-in-out;
+}
+
+nav ul li a:hover{
+    color: black;
+    background-color: #ffd500;
+}
+
+nav ul li a.active {
+    color: black;
+    background-color: #ffd500;
+}
+
+/*==============================
+ final style nav 
+================================*/
+
+
+
+/**********************************
+ style start main 
+ **********************************/
+#main {
+    display: flex;
+    align-items: center;
+    height:100%;
+    justify-content: flex-start;
+    background-color: transparent;
+    
+  
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 100px;
+    justify-content: flex-start;
+    
+}
+
+ .static-txt h1{
+    color: #fff;
+    font-size: 50px;
+    
+}
+.dinamic-txt h2 {
+    font-size: 50px;
+    color: rgb(82, 255, 2);
+    line-height: 90%;
+    overflow: hidden;
+    padding: auto;
+   
+}
+
+.dinamic-txt h2 span{
+    position: relative;
+    
+}
+
+.dinamic-txt h2 span::after{
+    content: " ";
+    position: absolute;
+    border-left: 5px solid #fff;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    animation: typing 2.8s steps(10) infinite alternate;
+    animation-delay: 2s;
+    
+}
+
+@keyframes typing {
+    100% 
+    {
+        left: 100%;
+        margin: 0 -40px 18px 35px;
+    }
+
+    from, to { border-color: orange }
+    100% { border-color: orange; }
+}
+/*====================================
+    final style main 
+=====================================*/
+
+
+
+/**********************************
+ style start about 
+ **********************************/
+
+#about{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 0;
+    top: 0;
+    background-color: #dededf;
+    width: 100%;
+    height: 100vh;
+}
+
+section#about div.myimg img{
+    display: flex;
+    justify-content: flex-start;
+    width: 350px;
+    border-radius: 60%;
+    border: 8px solid #3d3d3d;
+}
+
+section#about div.text h4, p{
+    font-size: 1.1rem;
+    text-align: left;
+    padding: 1rem;
+}
+
+section#about div.text ul {
+    padding-left: 40px;
+    padding-top: 20px;
+}
+/*=============================
+     final style  about 
+ =============================*/
+
+
+/**********************************
+ style start projects 
+ **********************************/
+section#projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: #fdce23d7;
+    height: 90vh;
+}
+
+
+section#projects div{
+    background-color: #681c9b;
+    padding: 1.1rem;
+    margin: 0 1rem 0 1rem;
+    box-shadow: rgba(0, 0, 0, 0.7) 3px 10px 14px;
+    border-radius: 3%;
+    height: 58vh;
+}
+
+
+section#projects div h3{
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+section#projects div p{
+    color: #fff;
+    text-align: justify;
+}
+
+section#projects div img{
+    display: block;
+    margin: auto;
+    max-width: 200px;
+    border-radius: 6px;
+}
+
+
+
+section#projects div a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    text-decoration: none;
+}
+
+section#projects div a button{
+    margin: auto;
+    padding: 0.7rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    border-radius: 20px 20px 20px 20px;
+    background-color: rgb(34, 34, 34);
+    color: #ffd500;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.4s ease-in-out;
+    box-shadow: inset 0px 0px 0px #ffd500;
+}
+
+section#projects div a button:hover{
+    box-shadow: inset 300px 0px 0px #ffd500;
+    color: #000;
+    
+}
+
+/*==============================================
+  final style projects 
+================================================*/
+
+
+/************************************************
+ style start skills 
+ ************************************************/
+
+section#skills {
+    padding: 3rem 10rem 3rem 10rem;
+    background-color: #dededf;
+  }
+  
+ section#skills h2{
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+
+ }
+  
+  section#skills p {
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  
+  section#skills div {
+    display: flex;
+    border: 1px solid #2f2f2f;
+    border-radius: 1rem;
+  }
+  
+  section#skills span#html5 {
+    background-color: #3d0066;
+    width: 80%;
+    color: #ffd500;
+    padding: 0.3rem;
+    text-align: end;
+    border-radius: 0.9rem;
+  }
+  
+  section#skills span#css3 {
+    background-color: #3d0066;
+    width: 75%;
+    color: #ffd500;
+    padding: 0.3rem;
+    text-align: end;
+    border-radius: 0.9rem;
+  }
+  
+  section#skills span#script {
+    background-color: #3d0066;
+    width: 70%;
+    color: #ffd500;
+    padding: 0.3rem;
+    text-align: end;
+    border-radius: 0.9rem;
+  }
+  
+  section#skills span#python {
+    background-color: #3d0066;
+    width: 80%;
+    color: #ffd500;
+    padding: 0.3rem;
+    text-align: end;
+    border-radius: 0.9rem;
+  }
+  
+  section#skills span#flask {
+    background-color: #3d0066;
+    width: 70%;
+    color: #ffd500;
+    padding: 0.3rem;
+    text-align: end;
+    border-radius: 0.9rem;
+  }
+  
+  section#skills span#django {
+    background-color: #3d0066;
+    width: 80%;
+    color: #ffd500;
+    padding: 0.3rem;
+    text-align: end;
+    border-radius: 0.9rem;
+  }
+  
+
+  section#skills span#sql {
+    background-color: #3d0066;
+    width: 75%;
+    color: #ffd500;
+    padding: 0.3rem;
+    text-align: end;
+    border-radius: 0.9rem;
+  }
+  
+/*================================
+ final style skills 
+ =================================*/
+
+
+/*************************************
+ start style contact 
+ *************************************/
+section#contact{
+    height: 100vh;
+    padding: 3rem 10rem 3rem 10rem;
+    display: grid;
+    place-items: center;
+    background-color:rgb(34, 34, 34);
+}
+
+section#contact h2{
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    color: #ffd500;
+}
+
+section#contact form{
+    width: 50%;
+}
+
+section#contact form input, textarea{
+    width: 100%;
+    padding: 0.2em;
+    font-size: 1.2rem;
+    margin: 0 0 1em;
+    border: 2px solid #3d0066;
+    outline: none;
+    border-radius: 5px;
+}
+
+section#contact form label{
+    width: 100%;
+    font-size: 1.3rem;
+    color: #ffd500;
+}
+
+section#contact form button{
+    border: 1px solid #ffffff;
+    background-color:#ffd500;
+    color: #272727;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: inset 0px 0px 0px #3d0066 ;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    width: 40%;
+}
+
+section#contact form button:hover{
+    box-shadow: inset 300px 0px 0px #3d0066 ;
+    color: #eeff00;
+}
+/*=========================================
+    final style contact 
+ ==========================================*/
+
+
+/***********************************
+ start style footer 
+ ***********************************/
+footer{
+    font-size: 1.2rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3e0068 ;
+    width: 100%;
+    height: 15vh;
+}
+
+footer div#left {
+    padding: 2rem;
+    display: flex;
+    align-items: left;
+    color: #ffd500;
+    
+}
+
+footer div#right {
+    justify-content: space-between;
+  
+    display: flex;
+    align-items: right;
+    text-decoration: none;
+    color:#ffd500;
+}
+
+footer div#right ul{
+    padding: 1rem;
+    display:flex;
+    list-style: none;
+}
+
+footer div#right ul li {
+    font-size: 20px;
+    width: 3rem;
+    padding: 1.25rem
+}
+
+footer div#right ul li a{
+    text-decoration: none;
+    color:#ffd500;
+    border-radius: 40%;
+    box-shadow: inset 0px 0px 0px #ffd500;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+footer div#right ul li a:hover{
+    box-shadow: inset 300px 0px 0px #5b006b;
+    border-radius: 40%;
+    color: rgb(255, 255, 255);
+}
+/*=============================================
+     final style footer 
+==============================================*/
+

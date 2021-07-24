@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href=" {{ url_for('static', filename='images/favicon.png') }} ">
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio - Fábio Araujo</title>
+    </head>
+<body>
+
+    <!-- start nav-->
+        <nav>
+            <ul>
+                <li><a  class="active" href="#main"><i class="fas fa-home"></i></a></li>
+                <li><a href="#about"><i class="fas fa-address-card"></i></a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i></a></li>
+                <li><a href="#skills"><i class="fas fa-code"></i></a></li>
+                <li><a href="#contact"><i class="fas fa-envelope-open-text"></i></a></li>
+            </ul>
+        </nav>
+    <!-- end nav -->
+   
+    <!-- start section-main -->
+        <section id="main">
+            <!-- start nav -->
+        
+            <div class="container">
+
+                <div class="static-txt">
+
+                    <h1>I'm Fábio Araujo,</h1>
+                </div>
+                <div class="dinamic-txt">
+                    <h2><span>	 &lt;I'm Developer / &gt; . </span></h2>
+                </div>
+            </div>
+
+        </section>
+    <!-- end section-main -->
+
+
+    <!-- start section-about -->
+        <section id="about">
+            <div class="myimg">
+                <img src="{{url_for('static', filename='images/editada.png')}}" alt="" >
+            </div>
+            <div class="text">
+                <h4>❤️ Learn | 🖤 Music | 💛 Beer | 💙 Programming | 💞 Flamengo and my Family</h4>
+
+                <p>Here are some things to get you started:</p>
+                <ul>
+                    <li>🧑🏾‍💻 I’m currently working on <strong>Full Stack Web Development</strong> </li>
+                    <li>📖 I’m currently learning - <strong>Rest API</strong> </li>
+                    <li>🔥 Eternal apprentice in the technology</li><br><br><br>
+                    <hr/>
+                </ul>
+            </div>
+
+        </section>
+    <!-- end section-about -->
+
+
+    <!-- start section-projects -->
+    
+        <section id="projects">
+            
+            <div>
+                
+                <img src="https://fharaujo.github.io/images/thumbs/01.jpg" alt="" width="180" >
+                <h3>Contact Book</h3>
+                <p>Contact book was developed with Python3 + Django3 + PostgreSQL. Access the app on Heroku. Thanks.</p>
+                <a href="https://contactsbook-fa.herokuapp.com/" target="_blank">
+                    <button>Saiba mais</button>
+                </a>
+            </div>
+
+            <div>
+                <img src="https://uploaddeimagens.com.br/images/003/349/583/original/flaskmusic.PNG?1627068811" alt="" width="180">
+                <h3>Music Flask</h3>
+                <p>Flask music was developed with Python + Flask + SQLite3. Click the button! Access the app on Heroku.</p>
+                <a href="https://flaskmusic.herokuapp.com/" target="_blank">
+                    <button>Saiba mais</button>
+                </a>
+            </div>
+            <div>
+                <img src="https://fharaujo.github.io/images/thumbs/03.jpg" alt="" width="180">
+                <h3>Clone Instagram</h3>
+                <p>Clone Instagram was developed with HTML5 + CSS3. Click on the button! Access the code on GitHub. 
+                <br> Thanks.</p>
+                <a href="https://github.com/fharaujo/clone_instagram" target="_blank"> 
+                    <button>Saiba mais</button>
+                </a>
+            </div>
+            <div>
+                <img src="https://uploaddeimagens.com.br/images/003/349/586/original/blue-humor.PNG?1627068875" alt="" width="180">
+                <h3> The Game Humor</h3>
+                <p>Humor Game was developed in HTML5 + CSS3 + Javascript.       
+                    Click and access the app on Heroku. Thanks.</p><br>
+                <a href="#">
+                    <button>Saiba mais</button>
+                </a>
+            </div>
+            
+        </section>
+    <!-- end section-projects -->
+
+    <!-- start section-skills -->
+        <section id="skills">
+            <h2>Technical Skills</h2>
+
+            <p>HTML</p>
+            <div>
+                <span id="html5">80%</span>
+            </div>
+    
+            <p>CSS 3</p>
+            <div>
+                <span id="css3">75%</span>
+            </div>
+    
+            <p>JavaScript</p>
+            <div>
+                <span id="script">70%</span>
+            </div>
+    
+            <p>Python</p>
+            <div>
+                <span id="python">80%</span>
+            </div>
+    
+            <p>Flask</p>
+            <div>
+                <span id="flask">70%</span>
+            </div>
+    
+            <p>Django 3</p>
+            <div>
+                <span id="django">80%</span>
+            </div>
+    
+            <p>SQL</p>
+            <div>
+                <span id="sql">75%</span>
+            </div>
+
+        </section>
+    <!-- end section-skills -->
+
+    <!-- start section-contact -->
+        <section id="contact">
+            <h2>Send Your Message</h2>
+
+            <form action="/" method="POST">
+                <label for="subject">Subject:</label>
+                <input type="text" placeholder="Enter your subject" id="subject" name="subject">
+
+                <label for="nome">Name:</label>
+                <input type="text" placeholder="Enter your name" id="name" name="name">
+
+                <label for="email">E-mail:</label>
+                <input type="text" placeholder="Enter your email" id="email" name="email">
+
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message..."></textarea>
+
+                
+                <button type="submit" id="send">Submit</button>
+
+            </form>
+        </section>
+
+    <!-- end section-contact -->
+
+    <!-- button top scroll -->
+
+        <a id="btntop" href="#"><i class="fas fa-caret-square-up"></i></a>
+
+    <!-- end button top scroll -->
+
+    <!-- start section-footer -->
+        <footer>
+            <div id="left"> Fábio Araujo - © Copyright - 2021</div>
+            <div id="right">
+                <ul>
+                    <li>
+                        <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/fharaujo" target="_blank"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/fharaujo/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                </ul>
+                
+                
+                
+            </div>
+        </footer>
+    <!-- end section-footer -->
+    <script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>
