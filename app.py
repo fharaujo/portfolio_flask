@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request 
+from flask import Flask, render_template, redirect, request 
 
 import smtplib
 import os
@@ -25,13 +25,14 @@ def send():
         
         # envio automático de confirmação 
         subject = 'Fábio Araujo - Developer'
-        thanks = f'Subject: {subject}\nConfirmação de email recebido.\nObrigado por entrar em contato, {name}.\n\n\nCópia da sua Mensagem: {text}\n\nhttps://fharaujo.herokuapp.com/ \n\n GitHub: https://github.com/fharaujo\n\nLindedIn: https://www.linkedin.com/in/fharaujo/'
+        thanks = f'Subject: {subject}\nConfirmação de email recebido.\nObrigado por entrar em contato, {name}.\n\n\nCópia da sua Mensagem: {text}\n\nContatos:\nhttps://fharaujo.herokuapp.com/ \n\n GitHub: https://github.com/fharaujo\n\nLindedIn: https://www.linkedin.com/in/fharaujo/'
         
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
         server.login("araujofabio2012@gmail.com", os.getenv("PASSWORD"))
         server.sendmail("araujofabio2012@gmail.com", email, thanks.encode('utf-8'))
-        server.quit() 
+        server.quit()
+        return redirect('') 
         
     return render_template('index.html')
 
