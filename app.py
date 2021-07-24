@@ -25,7 +25,7 @@ def send():
         
         # envio automático de confirmação 
         subject = 'Fábio Araujo - Developer'
-        thanks = f'Subject: {subject}\nConfirmação de email recebido.\nObrigado por entrar em contato, {name}.\n\n\nCópia da sua Mensagem: {text}\n\nContatos:\nhttps://fharaujo.herokuapp.com/ \n\n GitHub: https://github.com/fharaujo\n\nLindedIn: https://www.linkedin.com/in/fharaujo/'
+        thanks = f'Subject: {subject}\nConfirmação de email recebido.\nObrigado por entrar em contato, {name}.\n\n\nCópia da sua Mensagem:\n {text}\n\nContatos:\nhttps://fharaujo.herokuapp.com/ \n\n GitHub: https://github.com/fharaujo\n\nLindedIn: https://www.linkedin.com/in/fharaujo/'
         
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
