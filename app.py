@@ -21,7 +21,7 @@ def send():
         server.starttls()
         server.login("araujofabio2012@gmail.com", os.getenv("PASSWORD"))
         server.sendmail(email,"araujofabio2012@gmail.com", msg.encode('utf-8'))
-        server.quit() 
+        
         
         # envio automático de confirmação 
         subject = 'Fábio Araujo - Developer'
