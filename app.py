@@ -32,7 +32,7 @@ def send():
         server.login("araujofabio2012@gmail.com", os.getenv("PASSWORD"))
         server.sendmail("araujofabio2012@gmail.com", email, thanks.encode('utf-8'))
         server.quit()
-        return redirect('') 
+        
         
     return render_template('index.html')
 
