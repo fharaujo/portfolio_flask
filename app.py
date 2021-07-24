@@ -1,9 +1,7 @@
 from flask import Flask, render_template, request 
 
 import smtplib
-
-from werkzeug.utils import redirect
-
+import os
 
 app = Flask(__name__)
 
@@ -21,20 +19,20 @@ def send():
         
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
-        server.login("araujofabio2012@gmail.com", "flamengo2019")
+        server.login("araujofabio2012@gmail.com", os.getenv("PASSWORD"))
         server.sendmail(email,"araujofabio2012@gmail.com", msg.encode('utf-8'))
-        
+        server.quit() 
         
         # envio automático de confirmação 
         thanks = f'Confirmação de email recebido.\nObrigado por entrar em contato, {name}. \n\n'
         
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
-        server.login("araujofabio2012@gmail.com", "flamengo2019")
+        server.login("araujofabio2012@gmail.com", os.getenv("PASSWORD"))
         server.sendmail("araujofabio2012@gmail.com", email, thanks.encode('utf-8'))
+        server.quit() 
         
-        
-    return redirect('/')
+    return render_template('index.html')
 
 
 @app.route('/')
