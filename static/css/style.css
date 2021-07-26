@@ -185,7 +185,7 @@ nav ul li a.active {
     100% 
     {
         left: 100%;
-        margin: 10 -40px 18px 35px;
+        margin: 2 -40px 18px 35px;
     }
 
     from, to { border-color: orange }
