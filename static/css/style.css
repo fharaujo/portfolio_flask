@@ -229,6 +229,32 @@ section#about div.text ul {
     padding-left: 40px;
     padding-top: 20px;
 }
+
+
+
+section#about a#down{
+    border: 1px solid #ffffff;
+    background-color:#ffd500;
+    color: #272727;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: inset 0px 0px 0px #3d0066 ;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    width: 25%;
+}
+
+section#about  a#down:hover{
+    box-shadow: inset 300px 0px 0px #3d0066 ;
+    color: #eeff00;
+}
 /*=============================
      final style  about 
  =============================*/
@@ -258,7 +284,7 @@ section#projects div{
 
 
 section#projects div h3{
-    color: #fff;
+    color: #eeff00;
     text-align: center;
     padding: 1rem;
 }
@@ -273,6 +299,8 @@ section#projects div img{
     margin: auto;
     max-width: 200px;
     border-radius: 6px;
+    border: 1px solid rgb(255, 255, 255);
+    
 }
 
 
