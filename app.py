@@ -14,13 +14,13 @@ def send():
         email = request.form['email']
         text =  request.form['message']
         
-        # recebendo a mensagem enviado 
+        # recebendo a mensagem enviada para o email
         msg = f'''Subject: {subject}\n\nNome: {name}\nEmail:({email})\n\n Mensagem:\n\n{text}'''
         
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
-        server.login("araujofabio2012@gmail.com", "dfbg hehk pmnq vkth")
-        server.sendmail(email,"araujofabio2012@gmail.com", msg.encode('utf-8'))
+        server.login("your_email", "your_password")
+        server.sendmail(email,"your_email", msg.encode('utf-8'))
         server.quit()
         
         # envio automático de confirmação 
@@ -29,8 +29,8 @@ def send():
         
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
-        server.login("araujofabio2012@gmail.com", "dfbg hehk pmnq vkth")
-        server.sendmail("araujofabio2012@gmail.com", email, thanks.encode('utf-8'))
+        server.login("your_email", "your_password")
+        server.sendmail("your_email", email, thanks.encode('utf-8'))
         server.quit()
         
         
