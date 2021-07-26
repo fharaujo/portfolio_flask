@@ -149,7 +149,8 @@ nav ul li a.active {
 
  .static-txt h1{
     color: #fff;
-    font-size: 50px;
+    font-size: 3.5rem;
+    margin-left: 25px;
     
 }
 .dinamic-txt h2 {
@@ -158,6 +159,7 @@ nav ul li a.active {
     line-height: 90%;
     overflow: hidden;
     padding: auto;
+
    
 }
 
@@ -183,7 +185,7 @@ nav ul li a.active {
     100% 
     {
         left: 100%;
-        margin: 0 -40px 18px 35px;
+        margin: 10 -40px 18px 35px;
     }
 
     from, to { border-color: orange }
