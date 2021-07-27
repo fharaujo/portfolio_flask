@@ -28,7 +28,6 @@ isname.addEventListener('keyup', () =>{
 });
 
 email.addEventListener('keyup', () =>{
-    var check=/@[w-]+./;
     if(email.value.indexOf('@') == -1 || email.value.indexOf('.') == -1){  
         email.style.borderColor = 'red';
         
